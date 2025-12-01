@@ -11,3 +11,4 @@ cargo-bundle-licenses \
 
 # build statically linked binary with Rust
 cargo install --bins --no-track --locked --root ${PREFIX} --path apps/oxlint
+cargo install --bins --no-track --locked --root ${PREFIX} --path apps/oxfmt
