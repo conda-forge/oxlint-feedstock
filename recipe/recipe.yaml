@@ -1,3 +1,15 @@
+recipe:
+  name: oxlint-oxfmt
+  version: "0"
+
+about:
+  license: MIT
+  license_file:
+    - LICENSE
+    - THIRDPARTY.yml
+  homepage: https://github.com/oxc-project/oxc
+  repository: https://github.com/oxc-project/oxc
+
 outputs:
   - package:
       name: oxlint
@@ -8,8 +20,10 @@ outputs:
     build:
       number: 0
       script:
-        - ${{ "build-oxlint.sh" if unix }}
-        - ${{ "build-oxlint.bat" if win }}
+        - if: unix
+          then: build-oxlint.sh
+        - if: win
+          then: build-oxlint.bat
     requirements:
       build:
         - ${{ compiler('rust') }}
@@ -20,13 +34,7 @@ outputs:
       - script:
           - oxlint --help
     about:
-      license: MIT
-      license_file:
-        - LICENSE
-        - THIRDPARTY.yml
       summary: Linter for JavaScript and TypeScript
-      homepage: https://github.com/oxc-project/oxc
-      repository: https://github.com/oxc-project/oxc
 
   - package:
       name: oxfmt
@@ -37,8 +45,10 @@ outputs:
     build:
       number: 0
       script:
-        - ${{ "build-oxfmt.sh" if unix }}
-        - ${{ "build-oxfmt.bat" if win }}
+        - if: unix
+          then: build-oxfmt.sh
+        - if: win
+          then: build-oxfmt.bat
     requirements:
       build:
         - ${{ compiler('rust') }}
@@ -49,13 +59,7 @@ outputs:
       - script:
           - oxfmt --help
     about:
-      license: MIT
-      license_file:
-        - LICENSE
-        - THIRDPARTY.yml
       summary: Formatter for JavaScript and TypeScript
-      homepage: https://github.com/oxc-project/oxc
-      repository: https://github.com/oxc-project/oxc
 
 extra:
   recipe-maintainers:
