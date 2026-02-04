@@ -64,3 +64,4 @@ outputs:
 extra:
   recipe-maintainers:
     - danielnachun
+    - tdejager
