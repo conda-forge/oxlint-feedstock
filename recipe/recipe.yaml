@@ -1,7 +1,3 @@
-recipe:
-  name: oxlint-oxfmt
-  version: "0"
-
 outputs:
   - package:
       name: oxlint
@@ -12,8 +8,8 @@ outputs:
     build:
       number: 0
       script:
-        - build-oxlint.sh  # [unix]
-        - build-oxlint.bat  # [win]
+        - ${{ "build-oxlint.sh" if unix }}
+        - ${{ "build-oxlint.bat" if win }}
     requirements:
       build:
         - ${{ compiler('rust') }}
@@ -41,8 +37,8 @@ outputs:
     build:
       number: 0
       script:
-        - build-oxfmt.sh  # [unix]
-        - build-oxfmt.bat  # [win]
+        - ${{ "build-oxfmt.sh" if unix }}
+        - ${{ "build-oxfmt.bat" if win }}
     requirements:
       build:
         - ${{ compiler('rust') }}
