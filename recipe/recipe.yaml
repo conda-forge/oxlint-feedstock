@@ -2,9 +2,6 @@ recipe:
   name: oxlint-oxfmt
   version: "0"
 
-build:
-  number: 0
-
 outputs:
   - package:
       name: oxlint
