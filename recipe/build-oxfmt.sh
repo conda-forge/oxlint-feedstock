@@ -10,5 +10,5 @@ cargo-bundle-licenses \
     --output THIRDPARTY.yml
 
 # build statically linked binary with Rust
-cargo install --bins --no-track --locked --root ${PREFIX} --path apps/oxlint
-cargo install --bins --no-track --locked --root ${PREFIX} --path apps/oxfmt
+# --no-default-features disables the napi feature which requires Node.js bindings
+cargo install --bins --no-track --locked --no-default-features --root ${PREFIX} --path apps/oxfmt
