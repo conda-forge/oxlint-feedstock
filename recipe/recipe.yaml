@@ -2,13 +2,8 @@ recipe:
   name: oxlint-oxfmt
   version: "0"
 
-about:
-  license: MIT
-  license_file:
-    - LICENSE
-    - THIRDPARTY.yml
-  homepage: https://github.com/oxc-project/oxc
-  repository: https://github.com/oxc-project/oxc
+build:
+  number: 0
 
 outputs:
   - package:
@@ -60,6 +55,15 @@ outputs:
           - oxfmt --help
     about:
       summary: Formatter for JavaScript and TypeScript
+
+about:
+  license: MIT
+  license_file:
+    - LICENSE
+    - THIRDPARTY.yml
+  summary: JavaScript and TypeScript tooling (oxlint linter and oxfmt formatter)
+  homepage: https://github.com/oxc-project/oxc
+  repository: https://github.com/oxc-project/oxc
 
 extra:
   recipe-maintainers:
