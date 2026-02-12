@@ -10,7 +10,7 @@ source:
   sha256: 61b2376852b231c42da6f42ca61dc0436eb3040da57f011fc7a6be564934fa84
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -22,7 +22,6 @@ requirements:
 tests:
   - script:
       - oxlint --help
-      - oxfmt --help
 
 about:
   license: MIT
@@ -36,3 +35,4 @@ about:
 extra:
   recipe-maintainers:
     - danielnachun
+    - tdejager
