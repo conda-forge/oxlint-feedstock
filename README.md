@@ -200,4 +200,5 @@ Feedstock Maintainers
 =====================
 
 * [@danielnachun](https://github.com/danielnachun/)
+* [@tdejager](https://github.com/tdejager/)
 

@@ -6,7 +6,6 @@ cargo-bundle-licenses --format yaml --output THIRDPARTY.yml || goto :error
 
 :: build
 cargo install --bins --no-track --locked --root "%LIBRARY_PREFIX%" --path apps\oxlint || goto :error
-cargo install --bins --no-track --locked --root "%LIBRARY_PREFIX%" --path apps\oxfmt || goto :error
 
 goto :EOF
 
