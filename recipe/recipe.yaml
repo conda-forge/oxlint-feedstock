@@ -1,5 +1,5 @@
 context:
-  version: "1.76.0"
+  version: "1.77.0"
 
 package:
   name: oxlint
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/oxc-project/oxc/archive/oxlint_v${{ version }}.tar.gz
-  sha256: 7db154e9242c561603a2fe8dd00831993de2afc156927be7c5cd311840cb5069
+  sha256: 10e2ea33722812451ae129a7a6e77c781439412843555144e2ce1c91c17a045f
 
 build:
   number: 0
